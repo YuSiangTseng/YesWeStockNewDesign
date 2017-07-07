@@ -1,0 +1,6 @@
+framework module Pods_AdsInTableView {
+  umbrella header "Pods-AdsInTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}
