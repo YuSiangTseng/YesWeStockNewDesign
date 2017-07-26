@@ -27,10 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             (APIResult) -> Void in
             switch APIResult {
             case let .Success(storageDetails):
-//                let navigationController = self.window?.rootViewController as? UINavigationController
-//                let storageListViewController = navigationController?.topViewController as? StorageListTableViewController
-//                storageListViewController?.storageDetailStore = StorageDetailStore(storageDetails: storageDetails, reviews: [])
-                //self.tableView.reloadData()
+                
                 let tabbarViewController = self.window?.rootViewController as? UITabBarController
                 let navigationController = tabbarViewController?.viewControllers?[0] as? UINavigationController
                 let storageListViewController = navigationController?.topViewController as? StorageListTableViewController

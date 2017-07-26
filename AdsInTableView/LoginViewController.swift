@@ -39,18 +39,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         {
             let fbAccessToken = FBSDKAccessToken.current().tokenString
             
-            print("User already logged in under facebook and the Access token is... \(fbAccessToken))")
-            // User is already logged in, do work such as go to next view controller.
-        }
-        else
-        {
-            //            //create a facebook login button
-            //            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            //            self.view.addSubview(loginView)
-            //            //loginView.center = self.view.center
-            //            loginView.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 285)
-            //            loginView.readPermissions = ["public_profile", "email", "user_friends"]
-            //            loginView.delegate = self
         }
         
     }
@@ -143,12 +131,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
                     if jsonres["success"] == true {
                         SVProgressHUD.dismiss()
                         
-                        //                        let barViewControllers = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as! UITabBarController
-                        //                        let nav = barViewControllers.viewControllers![0] as! UINavigationController
-                        //                        let destinationViewController = nav.topViewController as! FirstViewController
-                        //                        destinationViewController.storageDetailStore = self.storageDetailStore
-                        //                        let navProfile = barViewControllers.viewControllers![2] as! UINavigationController
-                        //
                         self.performSegue(withIdentifier: "showTabBar", sender: nil)
                         self.updateLoginStatus(isLogin: true)
                         Keychain.save("\(jsonres["token"])", forKey: "userToken")

@@ -86,10 +86,6 @@ class SearchListAPI {
             
         }
         
-        if isStorageCoverPhoto.count == 0 {
-            print("dasdsadsadasdasdasdsadsadasdasdasd")
-        }
-        
         return isStorageCoverPhoto
         
     }
